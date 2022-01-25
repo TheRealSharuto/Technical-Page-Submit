@@ -21,13 +21,27 @@ body {
     background: #9A7FAE;
     justify-content: center;
     color: whitesmoke;
-    font-size: medium;
+    font-size: 2vw !important;
+    z-index: 2;
 }
-
+/* If screen size is more than 600px wide, set the font-size of <div> to 80px */
+@media screen and (min-width: 600px) {
+    div.header {
+      font-size: 200px !important;
+    }
+  }
  
+  /* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    div.header {
+      font-size: 30px;
+    }
+  }
+
 #navbar {
     color: #9A7FAE;
 }
+
 .nav-links {
     position: fixed;
     padding-top: 10%;
@@ -69,6 +83,15 @@ body {
     color: #9A7FAE;
 }
 
+@media screen and (max-width: 600px) {
+    .nav a {
+      float: none;
+      width: 100%;
+      display: block;
+      overflow: hidden;
+    }
+  }
+  
 .info-part {
 padding-left: 25%;
 padding-top: 10%;
