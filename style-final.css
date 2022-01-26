@@ -3,9 +3,6 @@ html {
 }
 
 body {
-    --header-height: 6vw;
-
-    margin: var(--header-height) 0 0 0;
     font-family: 'Muli', sans-serif;
 }
 
@@ -14,7 +11,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--header-height);
+    height: 6vw;
     display: flex;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -24,18 +21,234 @@ body {
     font-size: 2vw !important;
     z-index: 2;
 }
-/* If screen size is more than 600px wide, set the font-size of <div> to 80px */
-@media screen and (min-width: 600px) {
-    div.header {
-      font-size: 200px !important;
+
+   /* If screen size is 400px wide, or less... */
+@media screen and (max-width: 400px) {
+    header.header{
+        padding-bottom: 4%;
+        padding-left: 1%;
+        height: 15vw;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        text-align-last: center;
     }
+    .nav a {
+        float: none;
+        width: 100%;
+        display: block;
+        overflow:hidden;
+        border: #9A7FAE 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+      }
+      div.info-part {
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-top: 0.3%;
+          z-index: 0;
+          margin-top: 25;
+      }
+      div.nav-links {
+          width: 100%;
+          position:fixed;
+          overflow: scroll;
+          height: 20%;
+          z-index: 1;
+          background:white;
+          border-bottom: #9A7FAE 1px solid;
+          margin-top: 5;
+      }
+      .nav {
+          height: 150px;
+      }
+      .nav-link--active, .nav-link:hover {
+          z-index: 1;
+      }
   }
- 
-  /* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-    div.header {
-      font-size: 30px;
+  /* If screen size is 700px wide, or less...*/
+@media screen and (max-width: 700px) {
+    header.header{
+        padding-bottom: 2%;
+        padding-left: 1%;
+        height: 9vw;
+        z-index: 2;
+        display: flex;
     }
+    .nav a {
+        float: none;
+        width: 100%;
+        display: block;
+        overflow:hidden;
+        border: #9A7FAE 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+      }
+      div.info-part {
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-top: 0.3%;
+          z-index: 0;
+          margin-top: 15;
+      }
+      div.nav-links {
+          width: 100%;
+          position:fixed;
+          overflow: scroll;
+          max-height: 20%;
+          z-index: 1;
+          background:white;
+          border-bottom: #9A7FAE 1px solid;
+      }
+      .nav {
+          margin-top: 0;
+          height: 150px;
+      }
+      .nav-link--active, .nav-link:hover {
+          z-index: 1;
+      }
+  }
+
+   /* If screen size is 900px wide, or less...*/
+@media screen and (max-width: 900px) {
+    header.header{
+        padding-bottom: 2%;
+        padding-left: 1%;
+        height: 9vw;
+        z-index: 2;
+        display: flex;
+    }
+    .nav a {
+        float: none;
+        width: 100%;
+        display: block;
+        overflow:hidden;
+        border: #9A7FAE 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+      }
+      div.info-part {
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-top: 0.3%;
+          z-index: 0;
+          margin-top: 45;
+      }
+      div.nav-links {
+          width: 100%;
+          position:fixed;
+          overflow: scroll;
+          max-height: 20%;
+          z-index: 1;
+          background:white;
+          border-bottom: #9A7FAE 1px solid;
+      }
+      .nav {
+          margin-top: 2;
+          height: 150px;
+      }
+      .nav-link--active, .nav-link:hover {
+          z-index: 1;
+      }
+  }
+
+   /* If screen size is 570px wide, or less...*/
+@media screen and (max-width: 570px) {
+    header.header{
+        padding-bottom: 2%;
+        padding-left: 1%;
+        height: 15vw;
+        z-index: 2;
+        display: flex;
+    }
+    .nav a {
+        float: none;
+        width: 100%;
+        display: block;
+        overflow:hidden;
+        border: #9A7FAE 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+      }
+      div.info-part {
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-top: 0.3%;
+          z-index: 0;
+          margin-top: 30;
+      }
+      div.nav-links {
+          width: 100%;
+          position:fixed;
+          overflow: scroll;
+          height: 20%;
+          max-height: 26%;
+          z-index: 1;
+          background:white;
+          border-bottom: #9A7FAE 1px solid;
+          margin-top: 5;
+      }
+      .nav {
+          margin-top: 20;
+          height: 120px;
+      }
+      .nav-link--active, .nav-link:hover {
+          z-index: 1;
+      }
+  }
+
+  /* If screen size is 290px wide, or less...*/
+@media screen and (max-width: 390px) {
+    header.header{
+        padding-bottom: 2%;
+        padding-left: 1%;
+        height: 16vw;
+        z-index: 2;
+        display: flex;
+    }
+    .nav a {
+        float: none;
+        width: 100%;
+        display: block;
+        overflow:hidden;
+        border: #9A7FAE 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+      }
+      div.info-part {
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-top: 0.3%;
+          z-index: 0;
+          margin-top: 15;
+      }
+      div.nav-links {
+          width: 100%;
+          position:fixed;
+          overflow: scroll;
+          max-height: 20%;
+          z-index: 1;
+          background:white;
+          border-bottom: #9A7FAE 1px solid;
+      }
+      .nav {
+          margin-top: 15;
+          height: 120px;
+      }
+      .nav-link--active, .nav-link:hover {
+          z-index: 1;
+      }
   }
 
 #navbar {
@@ -82,15 +295,6 @@ body {
 .nav-link a:active {
     color: #9A7FAE;
 }
-
-@media screen and (max-width: 600px) {
-    .nav a {
-      float: none;
-      width: 100%;
-      display: block;
-      overflow: hidden;
-    }
-  }
   
 .info-part {
 padding-left: 25%;
